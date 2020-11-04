@@ -12,7 +12,7 @@ import { WebSocketLink } from "apollo-link-ws"
   headers: {
     Authorization: `Bearer ${localStorage.getItem("token")}`
   }
-});*/
+});
 
 const wsLink = new WebSocketLink({
   uri: `ws://localhost:4000/graphql`,
@@ -20,12 +20,12 @@ const wsLink = new WebSocketLink({
     reconnect: true,
   },
 
-})
+})*/
 
 export default new ApolloClient({
   uri: `http://localhost:4000`,
-  cache: new InMemoryCache(),
-  link: wsLink,
+  //cache: new InMemoryCache(),
+  //link: wsLink,
   clientState: {
     defaults,
     resolvers

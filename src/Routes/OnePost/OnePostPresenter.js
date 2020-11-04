@@ -9,6 +9,7 @@ export default ({data, loading} ) =>{
             <Loader/>
         )
     }else{
+        console.log(data)
         return "hello"
     }
 }
